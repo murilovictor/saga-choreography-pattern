@@ -14,12 +14,12 @@ public class SagaJobMap {
         return jobMap;
     }
 
-    public SagaJobMap adicionarJob(String s, Object o) {
+    public SagaJobMap addProperties(String s, Object o) {
         getJobMap().put(s, o);
         return this;
     }
 
-    public Object recuperarJob(String s){
+    public Object getProperties(String s) {
         return getJobMap().get(s);
     }
 

@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author mvictor - 12/12/2019
- * @E-mail murilo.victor@unicid.edu.br
  */
 @RestController
 @RequestMapping("contagem")
@@ -23,8 +22,7 @@ public class ContagemController {
 
     @GetMapping("/processar")
     public ResponseEntity<String> processar() {
-        log.info("INÍCIO - processar()");
-        return new ResponseEntity<>(processo1.adicionarMensagemSaga("Murilo VIctor"), HttpStatus.OK);
+        return new ResponseEntity<>(processo1.adicionarMensagemSaga("Murilo Victor"), HttpStatus.OK);
     }
 
 }

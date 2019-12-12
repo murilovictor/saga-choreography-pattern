@@ -11,6 +11,5 @@ import org.springframework.stereotype.Service;
 public class Step5Compensation implements SagaDelegate {
     @Override
     public void execute(SagaJobMap sagaJobMap) {
-        System.out.println("Executando: " + this.getClass().getSimpleName());
     }
 }

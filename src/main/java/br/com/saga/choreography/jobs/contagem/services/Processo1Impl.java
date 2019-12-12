@@ -21,10 +21,10 @@ public class Processo1Impl implements IProcesso1 {
 
     @Override
     public String adicionarMensagemSaga(String mensagem) {
-        SagaJobMap sagaJobMap = new SagaJobMap().adicionarJob("Processo1Impl", mensagem);
+        SagaJobMap sagaJobMap = new SagaJobMap().addProperties("Processo1Impl", mensagem);
 
         processSaga.execute(sagaJobMap, choreography.createChoreography());
 
-        return (String) sagaJobMap.recuperarJob("Processo1Impl");
+        return (String) sagaJobMap.getProperties("Processo1Impl");
     }
 }

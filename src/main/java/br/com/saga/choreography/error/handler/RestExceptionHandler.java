@@ -38,7 +38,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
                 .builder()
                 .timestamp(new Date().getTime())
                 .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
-                .title("Erro ao Processar fila do Saga Choreography!")
+                .title("ERRO DURANTE O PROCESSAMENTO DO SAGA CHOREOGRAPHY.")
                 .detail(sagaException.getMessage())
                 .developerMessage(sagaException.getClass().getName())
                 .build();

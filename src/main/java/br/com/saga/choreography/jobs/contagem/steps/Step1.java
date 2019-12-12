@@ -11,7 +11,5 @@ import org.springframework.stereotype.Service;
 public class Step1 implements SagaDelegate {
     @Override
     public void execute(SagaJobMap sagaJobMap) {
-        System.out.println("Executando: " + this.getClass().getSimpleName());
-        sagaJobMap.adicionarJob("Step1", "Dados processados no Step1");
     }
 }
